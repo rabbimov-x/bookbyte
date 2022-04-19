@@ -5,6 +5,7 @@ import styled from "styled-components"
 export const SearchStyle = styled.div`
 overflow: hidden;
 width: ${({w})=> w ? w : "35%" };
+height: fit-content;
 background: var(--shade-1);
 /* box-shadow: 0px 0px 0px 4px rgba(3, 132, 198, 0.12); */
 border-radius: 5px;
@@ -13,9 +14,6 @@ border-radius: 5px;
     width: 100%;
     height: auto;
 }
-.searchicon2{
-    display: none;
-}
 
 @media (max-width: 992px) {
     width: ${({w})=> w ?  `calc(${w}*1.2)` : "42%"};
@@ -23,22 +21,14 @@ border-radius: 5px;
 @media (max-width: 767px) {
     
         width: ${({w})=> w ?  `calc(${w}*1.6)` : "55%"};
-        margin: 0 5%;
     
 }
 @media (max-width: 576px) {
     width: ${({w})=> w ?  `calc(${w}*1.8)` : "63%"};
-   button{
-       display: none;
-   } 
 
-   .searchicon{
+   /* .searchicon{
        display:none;
-   }
-   .searchicon2{
-       display: block;
-       margin: 2px 11px;
-   }
+   } */
    input{
        padding: 5px  0 5px 10px ;
    }
@@ -46,7 +36,7 @@ border-radius: 5px;
 }
 `
 SearchStyle.Button = styled.button`
-width: ${({w})=> w ? w : "17.7%"};
+width: ${({w})=> w ? w : "24%"};
 height: auto;
 display: flex;
 justify-content: center;

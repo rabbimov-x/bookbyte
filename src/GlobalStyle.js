@@ -1,12 +1,26 @@
 import styled ,{ createGlobalStyle , css } from "styled-components";
-import {ReactComponent as svg1} from './icons/Account.svg'
+import {ReactComponent as svg1} from './icons/Instagram.svg'
 import {ReactComponent as svg2} from './icons/Search.svg'
 import {ReactComponent as svg3} from './icons/Cancel.svg'
 import {ReactComponent as svg4} from './icons/Fill=None.svg'
 import {ReactComponent as svg5} from './icons/Style=Outline-1.svg'
 import {ReactComponent as svg6} from './icons/MorePoint.svg'
-
-
+import {ReactComponent as svg7} from './icons/Stars.svg'
+import {ReactComponent as svg8} from './icons/Style=Opened.svg'
+import {ReactComponent as svg9} from './icons/Style=Closed.svg'
+import {ReactComponent as svg10} from './icons/ThumbsDownOutline.svg'
+import {ReactComponent as svg11} from './icons/ThumbsUpOutline.svg'
+import {ReactComponent as svg12} from './icons/ThumbsDownFill.svg'
+import {ReactComponent as svg13} from './icons/ThumbsUpFill.svg'
+import {ReactComponent as svg14} from './icons/Facebook.svg'
+import {ReactComponent as svg15} from './icons/Odnoklassniki.svg'
+import {ReactComponent as svg16} from './icons/VKontakte.svg'
+import {ReactComponent as svg17} from './icons/Account.svg'
+import {ReactComponent as svg18} from './icons/Shopping Cart.svg'
+import {ReactComponent as svg19} from './icons/Style=Fill-1.svg'
+import {ReactComponent as svg20} from './icons/E-Mail.svg'
+import {ReactComponent as svg21} from './icons/navigation.svg'
+import {ReactComponent as svg22} from './icons/x.svg'
 // const btncolor = (bg)=>{
 //     switch(bg){
 //         case "prim" : return "--primary";
@@ -82,9 +96,10 @@ ${font}
 width: ${({w})=> w ? w : "" };
 line-height: 120%;
 font-style: normal;
-color : ${({cl})=>cl ? `var(${cl})` : "var(--cl-white)"};
-text-shadow: ${({tSh})=> tSh ? "-1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1)" : "-1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1)"};
-filter: ${({fSh})=> fSh ? "drop-shadow(-4.51px 2.26px 0.75px rgba(0, 0, 0, 0.15))" : "none"};
+order: 0;
+color : ${({cl})=>cl ? `var(${cl})` : "var(--shade-7)"};
+/* text-shadow: ${({tSh})=> tSh ? "-1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1)" : "-1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1)"}; */
+/* filter: ${({fSh})=> fSh ? "drop-shadow(-4.51px 2.26px 0.75px rgba(0, 0, 0, 0.15))" : "none"}; */
 `
 
 export const Container = styled.div`
@@ -94,12 +109,13 @@ flex-direction: ${({flex})=> flex? "column" : "none"};
 flex-wrap: ${({nowrap})=> nowrap? "nowrap" : "wrap"};
 justify-content: ${({justify})=>justify? justify: "left"};
 align-items: ${({align})=>align? "center": "" };
-padding: ${({pd})=>pd? pd : "0"} 5%;
+padding: ${({pd})=>pd? pd : "0"} 4%;
+background-color: ${({bg})=>bg? `var(${bg})` : ""};
 `
 export const Col12 = styled.div`    
       ${allCommon}
       width: 100%;
-      padding: ${({pd})=>pd? pd : "0 var(--mp15)"} ;
+      padding: ${({pd})=>pd? pd : "0 var(--mp10)"} ;
 `
 export const Col10 = styled(Col12)`
     width: 83.333%;
@@ -115,11 +131,14 @@ export const Col6 = styled(Col12)`
 `
 export const Col4 = styled(Col12)`
     width: 33.333%;
-    @media (max-width: 757px) {
-        width: 50%;
+    @media (max-width: 934px) {
+        width: ${({max})=> max ? "50%" : "33.333%"};
     }
-    @media (max-width: 576px) {
-        width: 80%;
+    @media (max-width: 757px) {
+        width: ${({max})=> max ? "65%" : "50%"};
+    }
+    @media (max-width: 576px) { 
+        width:  ${({max})=> max ? "100%" : "100%"}; 
         margin: 0 auto;
         padding: 0 auto;
     }
@@ -135,6 +154,22 @@ export const Col3  = styled(Col12)`
         padding : 0 auto ;
     }
     
+`
+export const Col2  = styled(Col12)`
+width: 16.6%;
+
+@media (max-width: 992px) {
+    width: 25%;
+}
+@media (max-width: 757px) {
+    width: 33.333%;
+}
+@media (max-width: 576px) {
+    width: 50%;
+    margin: 0 auto;
+    padding : 0 auto ;
+}
+
 `
 export const Div = styled.div`
 ${allCommon}
@@ -152,12 +187,23 @@ border-radius: 5px;
 margin: ${({mr})=>mr? mr : "0"};
 background-color:${({bg})=>bg ? `var(${bg})` : "var(--primary)"} ;
 color:${({cl})=>cl? `var(${cl})` : "var(--shade-1)"}; 
-border: ${({btn})=> btn === "labelp" ? "1px solid var(--primary)": btn ==="labelt"? "1px solid rgba(255, 255, 255, 0.12)":"none"};
+border: ${({btn})=> btn === "labelp" ? "1px solid var(--primary)": btn ==="labelt"? "1px solid var(--secondary)":"none"};
 font-family: var(--familyR);
 font-style: normal;
 font-weight: 400;
 font-size:${({size})=>size? `var(${size})` : "var(--siz16)"} ;
 line-height: 140%;
+display: flex;
+align-items: center;
+transition: all 0.1s ease;
+&:hover{
+    border-color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--shade-1)
+}
+&:active{
+    transform: scale(0.95);
+}
 
 @media (max-width: 767px) {
 
@@ -173,6 +219,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: none;
+margin: ${({mr})=>mr? mr : "0"};
 outline: none;
 background: #FFFFFF;
 border-radius: 50%;
@@ -208,6 +255,18 @@ svg{
         }
     }
 }
+
+@media (max-width: 992px) {
+    width: 40px;
+    height: 40px;
+    .numberBtn{
+        bottom: -1.5px;
+        right: -1.5px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
 `
 Button.Back = styled(Button.Wish)`
 svg{
@@ -241,7 +300,8 @@ box-shadow: 0px 0px 8px rgba(25, 32, 56, 0.32);
 export const Line = styled.div`
 ${allCommon}
 height: 0;
-border: 0.6px solid #FFFFFF;
+flex: ${({flex})=> flex? flex : ""};
+border: 1px solid ${({br})=> br ? `var(${br})` : "var(--shade-6)"};
 `
 
 export const LinkA = styled.a`
@@ -279,11 +339,72 @@ display: ${({display})=>display? display : "block" };
 
 export const  Img = styled.div`
 ${allCommon}
-
+overflow: hidden;
+border-radius: ${({rad})=> rad ? rad : ""};
+background-color: ${({bg})=> bg ? `var(${bg})` : "var(--shade-6)"};
 &> img{ 
+    height: ${({h})=> h ? h : "auto"};
+    min-height: 100%;
     width: 100%;
-    height: auto;
+    max-width: ${({mw})=> mw ? mw : "100%"};
 }
+`
+export const Social = styled.div`
+width: 32px;
+height: 32px;
+display: flex;
+outline: none;
+text-decoration: none;
+justify-content: center;
+border-radius: 50%;
+align-items: center;
+border:  1px solid var(--primary);
+transition: all 0.1s ease;
+&> svg{
+    width: 20px;
+
+    path{
+        fill: var(--primary); 
+    }
+}
+
+&:hover{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    svg{
+        path{
+            fill: var(--shade-1);
+        }
+    }
+}
+&:active{
+    transform: scale(0.9);
+}
+
+@media (max-width: 1200px) {
+    width: 28px;
+    height: 28px;
+    &> svg{
+    width: 18px;
+    
+}
+}
+@media (max-width: 992px) {
+    width: 26px;
+    height: 26px;
+    &> svg{
+    width: 17px;
+    
+}
+}
+@media (max-width: 767px) {
+    width: 24px;
+    height: 24px;
+    &> svg{
+    width: 15px;
+}
+}
+
 `
 Icon.Search = styled(svg2)`
 ${common}
@@ -299,5 +420,58 @@ ${common}
 `
 
 Icon.MoreP = styled(svg6)`
+${common}
+`
+
+Icon.Stars = styled(svg7)`
+${common}
+`
+Icon.Oppened = styled(svg8)`
+${common}
+`
+Icon.Closed = styled(svg9)`
+${common}
+`
+Icon.ThumbsD = styled(svg10)`
+${common}
+`
+Icon.ThumbsU = styled(svg11)`
+${common}
+`
+Icon.ThumbsDF = styled(svg12)`
+${common}
+`
+Icon.ThumbsUF = styled(svg13)`
+${common}
+`
+Icon.Instagram = styled(svg1)`
+${common}
+`
+Icon.Facebook = styled(svg14)`
+${common}
+`
+Icon.Onoklassniki = styled(svg15)`
+${common}
+`
+Icon.VKontakte = styled(svg16)`
+${common}
+`
+Icon.Account = styled(svg17)`
+${common}
+`
+Icon.Cart = styled(svg18)`
+${common}
+`
+Icon.Like = styled(svg19)`
+${common}
+`
+Icon.Email = styled(svg20)`
+${common}
+`
+
+Icon.Nav = styled(svg21)`
+${common}
+`
+Icon.X = styled(svg22)`
 ${common}
 `

@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 export const CarouselStyle = styled.div`
 width: 100%;
+margin: 30px 0;
 .sliderall{
     width: 100%;
     min-height: 400px;
@@ -35,6 +36,9 @@ width: 100%;
 
         &:hover{
             background-color: red;
+        }
+        @media (max-width: 576px) {
+            display: none !important;
         }
     }
 

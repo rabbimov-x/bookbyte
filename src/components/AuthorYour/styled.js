@@ -7,6 +7,7 @@ padding:  0 20px;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin: 30px 0;
 &> div{
     text-align: center;
 }

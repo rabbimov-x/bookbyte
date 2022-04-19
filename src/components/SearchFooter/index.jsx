@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import { SearchStyle } from "./styled";
-import { Div, Icon } from "../../GlobalStyle";
-const Search = (props)=>{
+import { Div, Icon, P } from "../../GlobalStyle";
+const SearchFooter = (props)=>{
     const [value , setValue] = useState("")
     console.log(value);
     
@@ -9,8 +9,8 @@ const Search = (props)=>{
         <SearchStyle w = {props?.w ? props.w : ""}>
             <form>
                 <Div w = "100%" pd = "5px" h = "100%" display = "flex">
-                    <Icon.Search className = "searchicon" cl = "--shade-6" mr = "6px 11px" />
-                    <SearchStyle.Input type = "text" value = {value} onChange = {(e)=>setValue(e.target.value)} required placeholder = {props?.plac ? props.plac : "Search..."}>
+                    <Icon.Email className = "searchicon" cl = "--shade-6" mr = "6px 11px" />
+                    <SearchStyle.Input type = "email" value = {value} required onChange = {(e)=>setValue(e.target.value)}  placeholder = {props?.plac ? props.plac : "...@email"}>
                              {/* <Icon.Search cl = "--shade-6" mr =' 0 16px 0 0' /> */}
                     </SearchStyle.Input>
                     <Div w = "0" h = "auto" display = "flex" align ="center">
@@ -18,15 +18,12 @@ const Search = (props)=>{
                                 <Icon.Cansel cl = "--shade-6"/>
                     </SearchStyle.X > 
                     </Div>
-                    <Icon.Search className = "searchicon2" cl = "--shade-6" mr = "6px 11px" />
                     <SearchStyle.Button type = "button">
-                            knopka
-            
+                         Подписаться
                     </SearchStyle.Button>
-                    
                 </Div>
             </form>
         </SearchStyle>
     )
 }
-export default Search
+export default SearchFooter; 

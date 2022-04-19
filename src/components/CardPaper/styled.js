@@ -6,6 +6,7 @@ height: fit-content;
 padding: 20px;
 box-shadow: 0px 8px 16px rgba(25, 32, 56, 0.04);
 border-radius: 5px;
+margin: 30px 0;
 background-color: var(--shade-1);
 
 `
