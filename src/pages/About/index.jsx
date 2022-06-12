@@ -2,10 +2,10 @@ import React from "react";
 
 import { useSelector } from "react-redux";
 import {  Col2,   Container, Div, Img, P } from "../../GlobalStyle";
-import { AboutStyled,  OurGenres, OurValue } from "./styled";
 import Footer from "../../components/Footer";
 import AuthorEach from "../../components/AuthorYour";
 import { useEffect } from "react";
+import { AboutStyled,  ButtonG,  OurGenres, OurValue } from "./styled";
 
 
 const About = () =>{
@@ -43,25 +43,25 @@ const About = () =>{
             
             <Container>
             <OurGenres>
-                <OurGenres.buttons>
+                <ButtonG>
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Drama</P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.buttons>
+                </ButtonG>
                 
-                <OurGenres.buttons >
+                <ButtonG >
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Romantic </P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.buttons>
+                </ButtonG>
                 
-                <OurGenres.buttons >
+                <ButtonG >
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Detective</P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.buttons>
+                </ButtonG>
                 
-                <OurGenres.buttons >
+                <ButtonG >
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Adventure</P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.buttons>
+                </ButtonG>
                 
             </OurGenres>
             </Container>

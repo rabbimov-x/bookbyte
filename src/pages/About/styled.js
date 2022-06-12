@@ -26,7 +26,7 @@ margin-top: 60px;
     padding: 30px 10px;
 }
 `
-OurGenres.buttons = styled.button`
+export const ButtonG = styled.button`
 outline: none;
 border: none;
 position: relative;
