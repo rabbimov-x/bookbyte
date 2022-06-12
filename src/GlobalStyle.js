@@ -128,6 +128,10 @@ export const Col8 = styled(Col12)`
 `
 export const Col6 = styled(Col12)`
     width: 50%;
+    @media (max-width: 934px) {
+        width: ${({min})=> min ? "50%" : "100%"};
+    }
+    
 `
 export const Col4 = styled(Col12)`
     width: 33.333%;

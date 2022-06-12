@@ -55,14 +55,28 @@ export const OurValue = styled.div`
 width: 100%;
 padding: 0 30px;
 display: flex;
+flex-wrap: wrap;
 
 .leftTitle{
-    width: 50%;
+    width: 100%;
     padding-right: 10%;
     height: auto;
+    @media (max-width: 934px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 .rightImg{
-    width: 50%;
+    width: 70%;
     height: 100%;
+    margin: 0 auto;
+    @media (max-width: 934px) {
+        margin: 30px 0;
+        width: 100%;
+    }
 }
+
+
 `

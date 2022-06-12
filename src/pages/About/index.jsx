@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector } from "react-redux";
-import {  Col2,   Container, Div, Img, P } from "../../GlobalStyle";
+import { Col2, Col6,   Container, Div, Img, P } from "../../GlobalStyle";
 import Footer from "../../components/Footer";
 import AuthorEach from "../../components/AuthorYour";
 import { useEffect } from "react";
@@ -67,11 +67,12 @@ const About = () =>{
             </Container>
             <Container pd = "30px ">
                 <OurValue>
+                    <Col6>
                     <div className="leftTitle">
                        <Div position = "relative" top = "0" left = "-20px">
                         <P size = "--size23" bold = "700">OUR VALUE</P>
                        </Div>
-                        <P size = "--size40" bold = "700" mr = "15px" cl= "--cl-black" >A melting pot for the 
+                        <P size = "--size40" font = "--familyR" bold = "800" mr = "15px"  >A melting pot for the 
                             best idea  </P>
                         <P size = "--size18" bold = "700" mr = "10px 0 0 15px">Integrity</P>
                         <P w ="70%" size = "--size15"  mr = "5px 0 0 15px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, eos dolorem hic commodi quis repudiandae.</P>
@@ -83,11 +84,14 @@ const About = () =>{
                         <P w ="70%" size = "--size15"  mr = "5px 0 0 15px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, eos dolorem hic commodi quis repudiandae.</P>
                         
                     </div>
-                    <div className="rightImg">
-                        <Img w = "70%" mr = " 0 0 0 auto" h ="100%" >
-                        <img src="./assets/images/jpg/caroucel5.jpg" alt="" />
+                    </Col6>
+                    <Col6>
+                    <div className="rightImg" >
+                        <Img w = "100%"  h ="100%" fit>
+                            <img fit src="./assets/images/jpg/caroucel5.jpg" alt="" />
                         </Img>
                     </div>
+                    </Col6>
 
                 </OurValue>
             </Container>

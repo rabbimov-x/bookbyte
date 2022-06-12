@@ -5,14 +5,19 @@ width: 100%;
 margin-bottom: 20px;
 padding: 30px 0;
 display: flex;
+flex-wrap: wrap;
+color: var(--shade-9);
 .btn-p{
   width: fit-content;
  margin-top: auto;
  margin-bottom: 5px;
+ @media (max-width: 956px) {
+margin: auto auto 5px auto;
+}
 }
 `
 AuthorStyle.Img = styled.div`
-width: 57.85%;
+width: 100%;
 margin-right: 1.65%;
 display: flex;
 justify-content: center;
@@ -26,15 +31,20 @@ justify-content: center;
 `
 export const Artecle = styled.article`
   padding: 50px 40px 0 40px;
-  width: 40.5%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   &> h2{
     margin-bottom: 40px;
-    color: var(--cl-black);
+    color: var(--shade-9);
   }
   &> p{
-
+    color: var(--shade-9);
   }
+  @media (max-width: 956px) {
+        padding: 50px 0 0 0;
+        text-align: center;
+    }
+  
 `
