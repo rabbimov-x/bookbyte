@@ -14,7 +14,7 @@ const Footer =()=>{
                     <Ul>
                         <Ul.Li>
                             <P mr = " 0 0 10px 0" size = "--size18" cl = "--shade-6" bold = "600"  >
-                               Каталог
+                               Каталогс
                             </P>
                         </Ul.Li>
                         <Ul.Li>
