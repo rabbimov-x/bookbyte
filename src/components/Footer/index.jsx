@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, Col4, Container, Social, Icon } from "../../GlobalStyle";
+import { Div, Col4, P, Container, Social, Icon } from "../../GlobalStyle";
 import SearchFooter from "../SearchFooter";
 import {NavLink} from "react-router-dom" 
 import { FooterStyled, Ul } from "./styled";
