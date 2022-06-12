@@ -1,11 +1,9 @@
 import React from "react";
 
 import { useSelector ,useDispatch } from "react-redux";
-import { Button, Col2, Col4, Col8, Container, Div, Img, P } from "../../GlobalStyle";
-import { AboutStyled, Header, OurGenres, OurValue } from "./styled";
-import Article from "../../components/CardArticle";
+import {  Col2,   Container, Div, Img, P } from "../../GlobalStyle";
+import { AboutStyled,  OurGenres, OurValue } from "./styled";
 import Footer from "../../components/Footer";
-import AboutAuthor from "../../components/AboutAuthor";
 import AuthorEach from "../../components/AuthorYour";
 import { useEffect } from "react";
 

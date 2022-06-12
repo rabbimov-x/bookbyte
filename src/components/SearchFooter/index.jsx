@@ -1,6 +1,6 @@
 import React, {  useState } from "react";
 import { SearchStyle } from "./styled";
-import { Div, Icon, P } from "../../GlobalStyle";
+import { Div, Icon } from "../../GlobalStyle";
 const SearchFooter = (props)=>{
     const [value , setValue] = useState("")
     return(

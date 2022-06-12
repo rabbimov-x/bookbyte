@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Div, Icon, Img, Line, P } from "../../GlobalStyle";
+import { Div, Icon, Img, Line, P } from "../../GlobalStyle";
 import { QuoteStyle } from "./styled";
 
 
