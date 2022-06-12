@@ -1,20 +1,22 @@
 import React from "react";
-
-import {Button, Div, Icon, P} from "../../GlobalStyle"
+import { useDispatch } from "react-redux";
+import {Button, Div, Icon, Img, P} from "../../GlobalStyle"
+import { addBooks } from "../../redux/types/types";
 import { CardStyle } from "./styled";
 
 
-export const CardPaper =()=>{
-
+export const CardPaper =({data})=>{
+   const dispatch = useDispatch()
     return(
         <CardStyle>
             <CardStyle.Img>
-                <Div>
-                    {/* <Img>
-                        <img src="" alt="" />
-                    </Img> */}
+                <Div h = "100%">
+                    <Img display = "flex" justify = "center" align = "center" h = "100%" className="imgOfPaper" >
+                        <img src={data.imgUrl} alt="error" />
+                    </Img>
                 </Div>
             </CardStyle.Img>
+            <Div mr = " 0 0 auto 0">
             <Div pd = "5px 0 10px 0" display = "flex" align = "center"> 
                 <Div pd = " 0 10px 0 0" display = "flex" w="fit-content">
                  <Icon.Star />
@@ -29,23 +31,27 @@ export const CardPaper =()=>{
                     </P>
                 </Div>
             </Div>
-            <Div w = "70%" pd = " 0 5px 0 0">
-                <P  size = "--size15"  cl = "--shade-7">
-                Название книги
-                В две строки
+            <Div w = "80%" pd = " 0 5px 0 0">
+                <P  size = "--size15" className="card-p"  cl = "--shade-7"  >
+                {data.title}
                 </P>
             </Div>
             <Div pd = " 0 5px 20px 0">
                 <P size = "--size13"  cl = "--shade-6">
-                 Автор книги
+                  {data.name}
                 </P>
             </Div>
-            <Div display = "flex" justify = "space-between">
-                <Button size = "--size15">
-                   Кнопка
+            </Div>
+            <Div display = "flex" justify = "space-between" mr = "inherit 0 0 0 !important ">
+                <Button size = "--size15" onClick={()=>dispatch({type: addBooks , data: data })}>
+                   Add Book
                 </Button>
                 <Div w= "fit-content" display = "flex">
-                    <Icon.LikeUmpty cl= "--shade-6" mr= "0 10px "/>
+                    {
+                        data.like ? 
+                                    <Icon.LikeUmpty cl= "--shade-6" stroke = "true" mr= "0 10px "/> :
+                                    <Icon.Like cl= "--lightRed" stroke = "true" mr= "0 10px "/> 
+                    },          
                     <Icon.MoreP cl= "--shade-6"/>
                 </Div>
             </Div>

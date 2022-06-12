@@ -23,9 +23,8 @@ border-radius: 50%;
 box-shadow: 0px 4px 8px rgba(25, 32, 56, 0.16);
 background-color: var(--shade-6);
 &> img{
-    max-width: 150%;
-    min-width: 100%;
-    width: auto;
-    height: auto;    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 `

@@ -9,7 +9,7 @@ const CarouselMain =(props)=>{
         dots: true,
         infinite: true,
         centerPadding: "60px",
-        autoplay: true,
+        // autoplay: true,
         speed: 700,
         slidesToShow: 6,
         slidesToScroll: 1,

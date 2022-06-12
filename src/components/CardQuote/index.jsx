@@ -3,17 +3,20 @@ import { Button, Div, Icon, Img, Line, P } from "../../GlobalStyle";
 import { QuoteStyle } from "./styled";
 
 
-const Quote = ()=>{
+const Quote = ({data})=>{
+    console.log(data)
     return(
         <QuoteStyle>
             <Div display = "flex">
                 <Img h = "48px" w= "32px" rad = "5px" bg = "--shade-6">
-                    <img  src="" alt="" />
+                    <img  src={data.imgBookUrl} alt="" />
                 </Img>
             <Div w = "auto" pd = " 0 0 0 10px">
                     <Div>
                         <P size = "--size15" cl= "--shade-7" bold = "600">
-                        Название статьи
+                        {
+                            data.bestBook
+                        }
                         </P>
                     </Div>
                     
@@ -33,7 +36,9 @@ const Quote = ()=>{
                 </Div>
                 <Div  h = "100px" >
                         <P size = "--size15" cl= "--shade-7">
-                        Цитата
+                        {
+                            data.aTitle
+                        }
                         </P>
                 </Div>
                 
@@ -44,12 +49,14 @@ const Quote = ()=>{
                 </Div>
                 <Div display = "flex" align = "center" justify = 'space-between' >
                     <Div display = "flex" align = "center" w = "fit-content">
-                        <Img w= "48px" h= "48px" rad = '50%'  display = "flex" align = "center" justify = "center">
-                            <img mw = "130%" src="../assets/images/png/man.png" alt="" />
+                        <Img  w= "48px" h= "48px" rad = '50%'  >
+                            <img  mw = "130%" src={data.imgUrl} fit  alt="" />
                         </Img>
                         <Div pd = " 0 0 0 10px" w = "fit-content" h = "fit-content">
                             <P size = "--size15" cl = "--shade-7" >
-                                Автор цитаты
+                                {data.name}
+                                &#xad; &#xad; 
+                                {data.userName}
                             </P>
                         </Div>
                     </Div>

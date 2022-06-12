@@ -3,7 +3,6 @@ import { SearchStyle } from "./styled";
 import { Div, Icon } from "../../GlobalStyle";
 const Search = (props)=>{
     const [value , setValue] = useState("")
-    console.log(value);
     
     return(
         <SearchStyle w = {props?.w ? props.w : ""}>

@@ -20,12 +20,14 @@ body {
 
 * {
   box-sizing: border-box;
-  
+}
 
+.cursorp{
+  cursor: pointer;
 }
 
 
-:root {
+  :root {
   --cl-white: #fff;
   --cl-balck: #000000;
   --shade-1: #FFFFFF;
@@ -42,6 +44,10 @@ body {
   --e-trans: rgba(255, 255, 255, 0.12);
   --rating: #FDCC0D;
   --danger:#F44336;
+  --lightRed: #ff7675;
+  --pink-btn: #CC9999; 
+  --bg-abouth: #EBFAF4;
+  --pink-btn-h: #875959;
   --warning: #FBC02D;
   --success:#55B559;
   --info:#03A9F4;
@@ -59,6 +65,7 @@ body {
   --size23: 23px;
   --size29: 29px;
   --size32: 32px;
+  --size40: 40px;
   /* =============  ICONS width============== */
   --icon-w18: 18px;
   --icon-w14: 14px;
@@ -66,6 +73,7 @@ body {
   --icon-w20: 20px;
   --icon-w24: 24px;
   --icon-w32: 32px;
+  --card-img: 283px;
   
   /* ============= MARGIN vs PADDING PX  ================ */
   --mp30: 30px;
@@ -90,13 +98,15 @@ body {
   --size23: 25px;
   --size29: 22px;
   --size32: 35px;
+  --size40: 50px;
+
   /* =============  ICONS width============== */
   --icon-w18: 20px;
   --icon-w14: 16px;
   --icon-w12: 14px;
   --icon-w20: 22px;
   --icon-w24: 26px;
-  
+  --card-img: 283px;
   
   }
 }
@@ -110,6 +120,7 @@ body {
   --size23: 23px;
   --size29: 29px;
   --size32: 32px;
+  --size40: 38px;
   }
 }
 @media (max-width: 992px) {
@@ -121,6 +132,9 @@ body {
     --size23: 21px;
     --size29: 27px;
     --size32: 30px;
+    --size40: 35px;
+
+    --card-img: 240px;
     /* =============  ICONS width============== */
   --icon-w18: 17px;
   --icon-w14: 13px;
@@ -138,12 +152,17 @@ body {
     --size23: 18px;
     --size29: 24px;
     --size32: 26px;
+    --size40: 30px;
+
+    --card-img: 200px;
     /* =============  ICONS width============== */
   --icon-w18: 16px;
   --icon-w14: 12px;
   --icon-w12: 10px;
   --icon-w20: 17px;
   --icon-w24: 20px;
+  --size40: 29px;
+
   }
 }
 
@@ -156,6 +175,8 @@ body {
     --size23: 15px;
     --size29: 21px;
     --size32: 23px;
+    --size40: 25px;
+
     /* =============  ICONS width============== */
   --icon-w18: 14px;
   --icon-w14: 10px;

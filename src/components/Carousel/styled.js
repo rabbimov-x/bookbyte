@@ -8,12 +8,26 @@ margin: 30px 0;
 .sliderall{
     width: 100%;
     min-height: 400px;
-    background-color: var(--shade-6);
-    border-radius: 5px;
+    /* background-color: var(--shade-6); */
+    /* border-radius: 10px; */
+    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
-
+    .singleimg{
+     width: 100%;
+     height: 500px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     &> img{
+        min-width: 100%;
+        min-height: 105%;
+        z-index: 2;
+        margin: auto;
+     }
+    }
 
 
     .slick-arrow::before{
@@ -48,7 +62,7 @@ margin: 30px 0;
     }
     .slick-prev{
         position: absolute;
-        left: 20px;
+        left: 15px;
         width: 48px;
         height: 48px;
         z-index : 1;
@@ -59,7 +73,7 @@ margin: 30px 0;
 }    
     .slick-next{
         position: absolute;
-        right: 20px;
+        right: 15px;
         width: 48px;
         height: 48px;
 
@@ -68,7 +82,7 @@ margin: 30px 0;
     }
 }
     .slick-dots{
-        bottom: 10px;
+        bottom: 30px;
         li{
             button{
                 &::before{

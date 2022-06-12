@@ -3,8 +3,6 @@ import { SearchStyle } from "./styled";
 import { Div, Icon, P } from "../../GlobalStyle";
 const SearchFooter = (props)=>{
     const [value , setValue] = useState("")
-    console.log(value);
-    
     return(
         <SearchStyle w = {props?.w ? props.w : ""}>
             <form>

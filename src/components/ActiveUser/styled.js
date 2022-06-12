@@ -12,6 +12,9 @@ align-items: center;
 background-color: var(--shade-1);
 margin-top: 1px;
 
+.userleft{
+    width: 50%;
+}
 
 .raundImg{
     width: 48px;
@@ -19,14 +22,10 @@ margin-top: 1px;
     background-color: var(--shade-6);
     border-radius: 50%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     &> img{
-        width: auto;
-        height: auto;
-        max-width: 130%;
-        min-width: 100%;
+        width: 100%;
+        height: 48px;
+        object-fit: cover;
     }
 }
 

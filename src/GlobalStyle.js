@@ -45,7 +45,7 @@ position: ${({position})=>position? position : `relative`};
 display: ${({display})=>display ? display : "block"};
 flex-direction: ${({flex})=> flex? flex : "none"}; 
 flex-wrap: ${({nowrap})=> nowrap? "nowrap" : "wrap"};
- justify-content: ${({justify})=>justify? justify: "left" }; 
+justify-content: ${({justify})=>justify? justify: "left" }; 
 align-items: ${({align})=>align? align: "" };
 text-align: ${({textC})=>textC? textC : "left"};
 padding: ${({pd})=>pd? pd : "0"};
@@ -60,7 +60,7 @@ font-weight: ${({bold})=> bold ? bold : "400"};
 padding: ${({pd})=>pd? pd : "0"};
 margin: ${({mr})=>mr? mr : "0"};
 display: ${({display})=>display ? display : "block"};
-line-height: 140%;
+line-height: 140% ;
 
 
 
@@ -94,7 +94,7 @@ text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
 export const P = styled.p`
 ${font}
 width: ${({w})=> w ? w : "" };
-line-height: 120%;
+line-height: 140%;
 font-style: normal;
 order: 0;
 color : ${({cl})=>cl ? `var(${cl})` : "var(--shade-7)"};
@@ -182,8 +182,9 @@ bottom: ${({bottom})=>bottom? bottom : ""};
 export const Button  = styled.button`
 border: none;
 outline: none;
+height: fit-content;
 padding: ${({pd})=>pd? pd : "8px 20px"};
-border-radius: 5px;
+border-radius: ${({brr})=>brr? brr : "5px"};
 margin: ${({mr})=>mr? mr : "0"};
 background-color:${({bg})=>bg ? `var(${bg})` : "var(--primary)"} ;
 color:${({cl})=>cl? `var(${cl})` : "var(--shade-1)"}; 
@@ -198,7 +199,7 @@ align-items: center;
 transition: all 0.1s ease;
 &:hover{
     border-color: var(--secondary);
-    background-color: var(--secondary);
+    background-color: ${({bgh})=>bgh ? `var(${bgh})` : "var(--secondary)"};
     color: var(--shade-1)
 }
 &:active{
@@ -333,7 +334,6 @@ display: ${({display})=>display? display : "block" };
 
  & path{
      fill: ${({cl})=>cl ? `var(${cl})` : ``};
-     
  }
 `
 
@@ -342,11 +342,13 @@ ${allCommon}
 overflow: hidden;
 border-radius: ${({rad})=> rad ? rad : ""};
 background-color: ${({bg})=> bg ? `var(${bg})` : "var(--shade-6)"};
+
 &> img{ 
     height: ${({h})=> h ? h : "auto"};
     min-height: 100%;
     width: 100%;
-    max-width: ${({mw})=> mw ? mw : "100%"};
+    max-width: ${({mw})=> mw ? mw : "150%"};
+    object-fit: ${({fit})=> fit ? "cover" : ""};
 }
 `
 export const Social = styled.div`

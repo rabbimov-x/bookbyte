@@ -3,11 +3,11 @@
 
 export const navbar = [
     { id:0 , title: 'Home', path: '/home'  , element : 'Home'} ,
-    { id:1 , title: 'All Products', path: '/all-products' , element : '</>' } ,
-    { id:2 , title: 'Your Carts', path: '/your-products'  , element : '</>'} ,
-    { id:3 , title: 'Smartphones', path: '/smartphones' , element : '</>' } ,
-    { id:4 , title: 'Cameras', path: '/cameras' , element : '</>' } ,
-    { id:5 , title: 'Accessories', path: '/accessories' , element : '</>' } ,
+    { id:1 , title: 'About', path: '/about' , element : '</>' } ,
+    { id:2 , title: 'Books', path: '/books' , element : '</>' } ,
+    { id:3 , title: 'Your books', path: '/your-products'  , element : '</>'} ,
+    { id:4 , title: 'Authors', path: '/authors' , element : '</>' } ,
+    { id:5 , title: 'Best Romans', path: '/best' , element : '</>' } ,
 ];
 
 

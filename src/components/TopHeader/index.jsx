@@ -3,9 +3,14 @@ import { Button, Container, Div, P, Icon} from "../../GlobalStyle";
 import Search from "../Search";
 import Navbar from "../Navbar"
 import { TopStyle } from "./styled";
+import { useSelector } from "react-redux";
 
 
 const TopHeader =()=>{
+    const state = useSelector((state)=>state);
+    const data = {
+        books: state.update.mybooks,
+    }
     return ( 
         <TopStyle>
                 <Container align = "center" justify = "space-between" pd = "30px 4% 10px">
@@ -18,7 +23,9 @@ const TopHeader =()=>{
                             <Button.Wish  mr = "0 auto">
                                 <Icon.Cart/>
                                 <div className = "numberBtn" content = "0">
-                                    0
+                                {
+                                        data.books.length
+                                    }
                                 </div>
                             </Button.Wish>
                             <P size = "--size15" cl = "--shade-1" mr = "5px 0 0 0">
@@ -34,7 +41,7 @@ const TopHeader =()=>{
                                 </div>
                             </Button.Wish>
                             <P size = "--size15" cl = "--shade-1" mr = "5px 0 0 0">
-                            Корзина
+                            your likes
                             </P>
                         </Div>
                         <Div pd = "" w = "fit-content">
@@ -45,7 +52,7 @@ const TopHeader =()=>{
                                 </div>
                             </Button.Wish>
                             <P size = "--size15" cl = "--shade-1" mr = "5px 0 0 0">
-                            Корзина
+                            Authors
                             </P>
                         </Div>
                     </Div>

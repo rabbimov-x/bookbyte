@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CarouselStyle } from "./styled";
 
-const Carousel = ()=>{
+const Carousel = ({data})=>{
+  
     const settings = {
         dots: true,
         infinite: true,
@@ -16,24 +17,16 @@ const Carousel = ()=>{
         <CarouselStyle>
             <h2> Single Item</h2>
         <Slider {...settings} className = "sliderall">
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
+          {
+            data.map((data, index)=>{
+              return(
+                <div  key={index} className="singleimg">
+                  <img src={data.imgUrl} width = "auto" alt="error" />
+                  <h1>1</h1>
+                </div>
+              )
+            })
+          }
         </Slider>
         </CarouselStyle>
     )

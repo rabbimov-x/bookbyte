@@ -3,23 +3,27 @@ import { Div, P, Icon } from "../../GlobalStyle";
 import { AcitveStyle } from "./styled";
 
 const ActiveUser = (props)=>{
-    console.log(props)
+    let data = props.data;
     return (
-        <AcitveStyle>
+        <AcitveStyle className="cursorp">
             
             
-                <Div w= "fit-content" h ="fit-content" display = "flex" align = "center">
+            <Div w= "fit-content" className={props?.book ? "" : "userleft" } h ="fit-content" display = "flex" align = "center">
                 <div className="raundImg">
-                    <img src="" alt="" />
+                    <img src= {data.imgUrl} alt="error" />
                 </div>
                 {
                 props?.book ? <Div w = "fit-content" display = "flex" pd = "0 15px"  >
                         <Div w = "fit-content" textC = "center" pd = "0 5.5px">
                             <P size = "--size13" cl =" --shade-7">
-                            Книги 
+                            {
+                                data.bestBook
+                            } 
                             </P>
                             <P size = "--size13" cl =" --shade-7">
-                                0
+                                {
+                                    data.startNamber
+                                }
                             </P>
                         </Div>
                         <Div w = "fit-content" textC = "center" pd = "0 5.5px">
@@ -47,12 +51,16 @@ const ActiveUser = (props)=>{
                             </P>
                         </Div>
                 </Div> : 
-                <Div w = "fit-content"  h ="fit-content" pd = "0 7.5px 0 15px" >
+                <Div w = "fit-content"   h ="fit-content" pd = "0 7.5px 0 15px" >
                     <P size = "--size15px" cl = '--shade-7'>
-                        Name
+                        {
+                            data.name
+                        }
                     </P>
                     <P size = "--size15px" cl = '--shade-7' pd = "5px 0 0 0">
-                        Usur Name
+                        {
+                            data.userName
+                        }
                     </P>
                 </Div>
             }
@@ -62,13 +70,15 @@ const ActiveUser = (props)=>{
                 <Div w= "fit-content" h ="fit-content" display = "flex" align = "center" pd = "0 10px">
                 <Icon.Stars cl = "--secondary" />
                 <P bold = "600" cl = "--shade-7" pd = " 0 0 0 5px">
-                    0
+                    {
+                        data.startNamber
+                    }
                 </P>    
             </Div>
             }
            
             <Div w= "fit-content" pd= "12px">
-                <P size = "--size18" bold = "600"  cl = "--shade-6" fontf = "--familyQ">
+                <P size = "--size18" className="cursorp" bold = "600"  cl = "--shade-6" fontf = "--familyQ">
                     {">"}
                 </P>
             </Div>

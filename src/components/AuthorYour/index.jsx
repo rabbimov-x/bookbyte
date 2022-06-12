@@ -2,18 +2,18 @@ import React from "react";
 import { Author } from "./styled";
 import { P, Div } from "../../GlobalStyle";
 
-const AuthorEach = ()=>{
+const AuthorEach = ({data})=>{
     return (
         <Author>
             <Author.Img>
-            <img src="./assets/images/png/man.png" alt="error" />
+            <img src={data.imgUrl} alt="error" />
             </Author.Img>
             <Div pd = "10px  0 0 0">
                 <P size = "--size15" cl ="--shade-7" >
-                Имя автора
+                {data.name} 
                 </P>
                 <P size = "--size15" cl ="--shade-6" pd = "5px 0 0 0">
-                Количество книг
+                {data.bestBook}
                 </P>
             </Div>
         </Author>
