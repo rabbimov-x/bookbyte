@@ -26,7 +26,7 @@ margin-top: 60px;
     padding: 30px 10px;
 }
 `
-OurGenres.btn = styled.button`
+OurGenres.buttons = styled.button`
 outline: none;
 border: none;
 position: relative;

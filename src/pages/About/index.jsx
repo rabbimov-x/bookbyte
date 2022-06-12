@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useSelector ,useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {  Col2,   Container, Div, Img, P } from "../../GlobalStyle";
 import { AboutStyled,  OurGenres, OurValue } from "./styled";
 import Footer from "../../components/Footer";
@@ -16,7 +16,6 @@ const About = () =>{
         outhor: state.home.outhor,
         threeBooks: state.home.threeImgBook,
     }
-    const dispatch = useDispatch()
     useEffect(()=>{
         console.log(state)
     },[state])
@@ -44,25 +43,25 @@ const About = () =>{
             
             <Container>
             <OurGenres>
-                <OurGenres.btn >
+                <OurGenres.buttons>
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Drama</P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.btn>
+                </OurGenres.buttons>
                 
-                <OurGenres.btn >
+                <OurGenres.buttons >
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Romantic </P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.btn>
+                </OurGenres.buttons>
                 
-                <OurGenres.btn >
+                <OurGenres.buttons >
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Detective</P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.btn>
+                </OurGenres.buttons>
                 
-                <OurGenres.btn >
+                <OurGenres.buttons >
                     <P size = "--size23" bold = "700" mr = "0 0 20px 0" cl = "--cl-black">Adventure</P>
                     <P size = "--size29" bold = "700">&#8594;</P>
-                </OurGenres.btn>
+                </OurGenres.buttons>
                 
             </OurGenres>
             </Container>
