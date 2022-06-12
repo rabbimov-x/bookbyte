@@ -30,7 +30,9 @@ const Article  = (props)=>{
                 <Div  display = "flex" justify  = "space-between" align = "center">
                     { props?.small ? 
                       "" :<Div w="fit-content" display = "flex" justify = "space-between"> <Button cl = "--primary" bg = "--shade-1" btn = "labelp" onClick={()=>dispatch({type: addBooks , data: props.data })} >
-                     Book now {">"}
+                      {
+                        !props.mybooks? "Book now >" : "Buy now"
+                      }   
                     </Button>
                     
                     </Div>

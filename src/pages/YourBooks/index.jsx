@@ -27,7 +27,7 @@ const YourBooks = () =>{
                         data.books? data.books.map((value )=>{
                             return(
                                 <Col4 key = {value.id}>
-                                    <Article myBooks data = {value} />
+                                    <Article mybooks data = {value} />
                                 </Col4>
                             )
                         }) : ""
